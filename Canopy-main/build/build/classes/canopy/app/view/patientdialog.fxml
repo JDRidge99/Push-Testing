@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane stylesheets="@login_Stylesheet.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="canopy.app.view.patientDialogController">
+   <children>
+      <BorderPane layoutX="238.0" layoutY="107.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane styleClass="card" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox alignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label fx:id="date" alignment="CENTER" contentDisplay="CENTER" styleClass="label-header" text="P A T I E N T" textAlignment="CENTER" />
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </top>
+         <center>
+            <GridPane hgap="10.0" styleClass="background-white" vgap="5.0" BorderPane.alignment="CENTER_RIGHT">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.0" minWidth="10.0" prefWidth="173.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="438.0" minWidth="10.0" prefWidth="230.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="5.0" prefWidth="5.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" percentHeight="0.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints percentHeight="0.0" vgrow="SOMETIMES" />
+                  <RowConstraints percentHeight="0.0" vgrow="SOMETIMES" />
+                  <RowConstraints percentHeight="0.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" percentHeight="0.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" percentHeight="0.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" percentHeight="0.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" percentHeight="0.0" vgrow="SOMETIMES" />
+                  <RowConstraints percentHeight="0.0" vgrow="ALWAYS" />
+                  <RowConstraints minHeight="10.0" percentHeight="0.0" vgrow="ALWAYS" />
+                  <RowConstraints percentHeight="0.0" vgrow="SOMETIMES" />
+                  <RowConstraints percentHeight="0.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="131.0" percentHeight="0.0" vgrow="SOMETIMES" />
+                  <RowConstraints percentHeight="0.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="-Infinity" percentHeight="0.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <HBox alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <children>
+                        <TextField fx:id="firstnamefield" alignment="CENTER" onKeyReleased="#hourfinished" styleClass="table-view" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <children>
+                        <TextField fx:id="lastnamefield" alignment="CENTER" styleClass="table-view" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="31.0" prefWidth="192.0" styleClass="label-grey" text="F I R S T   N A M E (S)" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <HBox GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3">
+                     <children>
+                        <DatePicker fx:id="datepicker" styleClass="table-view" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+                  <CheckBox fx:id="carercheckbox" mnemonicParsing="false" onAction="#onRecurringCheck" styleClass="label-grey" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <TextField fx:id="cftextbox" alignment="CENTER" onKeyReleased="#hourfinished" styleClass="table-view" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <TextField fx:id="cltextbox" alignment="CENTER" onKeyReleased="#hourfinished" styleClass="table-view" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                  <VBox GridPane.columnIndex="1" GridPane.rowIndex="8">
+                     <children>
+                        <TextField fx:id="streetfield" alignment="CENTER" promptText="Address" styleClass="table-view">
+                           <VBox.margin>
+                              <Insets bottom="5.0" />
+                           </VBox.margin></TextField>
+                        <TextField fx:id="cityfield" alignment="CENTER" promptText="City" styleClass="table-view">
+                           <VBox.margin>
+                              <Insets bottom="5.0" />
+                           </VBox.margin></TextField>
+                        <TextField fx:id="postcodefield" alignment="CENTER" promptText="Postal Code" styleClass="table-view" />
+                     </children>
+                  </VBox>
+                  <VBox GridPane.columnIndex="1" GridPane.rowIndex="11">
+                     <children>
+                        <ScrollPane hbarPolicy="NEVER" vbarPolicy="NEVER">
+                           <content>
+                              <VBox fx:id="emailslist" prefHeight="50.0" />
+                           </content>
+                        </ScrollPane>
+                        <HBox alignment="CENTER">
+                           <children>
+                              <TextField fx:id="emailfield" styleClass="table-view" />
+                              <Button mnemonicParsing="false" onMouseClicked="#addEmail" styleClass="buttonso" text="+">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <Label alignment="TOP_CENTER" contentDisplay="CENTER" styleClass="label-grey" text="D A T E   O F   B I R T H" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                  <Label alignment="TOP_CENTER" contentDisplay="CENTER" styleClass="label-grey" text="L A S T   N A M E (S)" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                  <VBox GridPane.columnIndex="1" GridPane.rowIndex="12">
+                     <children>
+                        <ScrollPane hbarPolicy="NEVER" vbarPolicy="NEVER">
+                           <content>
+                              <VBox fx:id="numberslist" prefHeight="50.0" />
+                           </content>
+                        </ScrollPane>
+                        <HBox alignment="CENTER">
+                           <children>
+                              <TextField fx:id="numberfield" styleClass="table-view" />
+                              <Button mnemonicParsing="false" onMouseClicked="#addNumber" styleClass="buttonso" text="+" HBox.hgrow="ALWAYS" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER_RIGHT" GridPane.halignment="RIGHT" GridPane.rowIndex="11">
+                     <children>
+                        <Label alignment="TOP_CENTER" contentDisplay="CENTER" styleClass="label-grey" text="C O N T A C T" />
+                        <Label alignment="TOP_CENTER" contentDisplay="CENTER" styleClass="label-grey" text="E M A I L S" />
+                     </children>
+                  </VBox>
+                  <Label alignment="TOP_CENTER" contentDisplay="CENTER" styleClass="label-grey" text="F O O T N O T E S" GridPane.halignment="RIGHT" GridPane.rowIndex="13" />
+                  <HBox GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.hgrow="NEVER" GridPane.rowIndex="13">
+                     <children>
+                        <TextField fx:id="diagnosesfield" alignment="CENTER" styleClass="table-view" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+                  <ButtonBar buttonMinWidth="0.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="14">
+                     <buttons>
+                        <Button mnemonicParsing="false" onAction="#handleOk" onMouseClicked="#handleOk" text="Ok" />
+                        <Button mnemonicParsing="false" onAction="#handleCancel" onMouseClicked="#handleCancel" text="Cancel" />
+                     </buttons>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="15.0" top="10.0" />
+                     </padding>
+                  </ButtonBar>
+                  <VBox alignment="CENTER_RIGHT" GridPane.rowIndex="12">
+                     <children>
+                        <Label alignment="TOP_CENTER" contentDisplay="CENTER" styleClass="label-grey" text="C O N T A C T" />
+                        <Label alignment="TOP_CENTER" contentDisplay="CENTER" styleClass="label-grey" text="N U M B E R S" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER_RIGHT" GridPane.rowIndex="8">
+                     <children>
+                        <Label alignment="TOP_CENTER" contentDisplay="CENTER" styleClass="label-grey" text="C O N T A C T" />
+                        <Label alignment="TOP_CENTER" contentDisplay="CENTER" styleClass="label-grey" text="A D D R E S S" />
+                     </children>
+                  </VBox>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="31.0" prefWidth="192.0" styleClass="label-grey" text="C A R E R (S)" GridPane.rowIndex="5" />
+                  <Label fx:id="cfheader" alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="31.0" prefWidth="192.0" styleClass="label-grey" text="C A R E R   O N E" GridPane.rowIndex="6" />
+                  <Label fx:id="clheader" alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="31.0" prefWidth="192.0" styleClass="label-grey" text="C A R E R   T W O" GridPane.rowIndex="7" />
+                  <Label alignment="TOP_CENTER" contentDisplay="CENTER" styleClass="label-grey" text="A G E" GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
+                  <Label fx:id="agelabel" alignment="TOP_CENTER" contentDisplay="CENTER" styleClass="label-dark" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                  <VBox alignment="CENTER_RIGHT" GridPane.rowIndex="9">
+                     <children>
+                        <Label alignment="TOP_CENTER" contentDisplay="CENTER" styleClass="label-grey" text="P E R M I S S I O N" />
+                        <Label alignment="TOP_CENTER" contentDisplay="CENTER" styleClass="label-grey" text="D O C U M E N T" />
+                     </children>
+                  </VBox>
+                  <HBox alignment="CENTER_LEFT" minWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                     <children>
+                        <Button fx:id="filebutton" minWidth="0.0" mnemonicParsing="false" onAction="#addfile" text="ADD FILE">
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Label fx:id="filename" minWidth="0.0" styleClass="label-grey">
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </GridPane>
+         </center>
+      </BorderPane>
+      <AnchorPane fx:id="coverpane" styleClass="card">
+         <children>
+            <VBox alignment="CENTER" layoutX="151.0" layoutY="165.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" styleClass="label-header" text="S A V I N G" />
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

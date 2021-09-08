@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="CanopyV0.94.jnlp">
+  <information>
+    <title>CanopyV0.94</title>
+    <vendor>com.gratech</vendor>
+    <description>Canopy</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="CanopyV0.94.jar" size="758520" download="eager" />
+    <jar href="libs\commons-lang3-3.7.jar" size="499634" download="eager" />
+    <jar href="libs\jasypt-1.9.2.jar" size="129265" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="0" height="0" main-class="canopy.app.MainApp"  name="Canopy" />
+  <update check="background"/>
+</jnlp>

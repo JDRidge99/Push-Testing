@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane minHeight="0.0" minWidth="0.0" onMouseEntered="#ground" onMouseExited="#lift" prefHeight="2000.0" prefWidth="1000.0" styleClass="background-transparent-top" stylesheets="@login_Stylesheet.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="canopy.app.view.notesListController">
+   <children>
+      <GridPane alignment="CENTER" minWidth="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="-Infinity" vgrow="NEVER" />
+            <RowConstraints minHeight="10.0" vgrow="NEVER" />
+            <RowConstraints minHeight="10.0" vgrow="ALWAYS" />
+            <RowConstraints minHeight="10.0" vgrow="NEVER" />
+         </rowConstraints>
+         <children>
+            <AnchorPane fx:id="titlebox" minWidth="0.0" prefWidth="0.0" styleClass="card">
+               <children>
+                  <VBox alignment="CENTER" minWidth="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label fx:id="date" alignment="CENTER" contentDisplay="CENTER" minWidth="0.0" styleClass="label-header" text="NOTES" textAlignment="CENTER" />
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane minWidth="0.0" prefWidth="0.0" styleClass="card-mid" GridPane.rowIndex="1">
+               <children>
+                  <VBox alignment="CENTER" minWidth="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox alignment="CENTER" minWidth="0.0">
+                           <children>
+                              <Label minWidth="55.0" styleClass="label-bright" text="T Y P E:">
+                                 <HBox.margin>
+                                    <Insets right="15.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <AnchorPane HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <ComboBox fx:id="typeselection" styleClass="table-view" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                              <Button mnemonicParsing="false" onMouseClicked="#editNoteTypes" text="EDIT" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" minWidth="0.0">
+                           <children>
+                              <Label minWidth="55.0" styleClass="label-bright" text="S O R T   B Y:">
+                                 <HBox.margin>
+                                    <Insets right="15.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <AnchorPane HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <ComboBox fx:id="sorterselection" styleClass="table-view" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="parent" minHeight="0.0" minWidth="0.0" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS">
+               <children>
+                  <ScrollPane fx:id="scrllparent" hbarPolicy="NEVER" minHeight="0.0" minWidth="0.0" pannable="true" prefHeight="0.0" prefWidth="0.0" vbarPolicy="NEVER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <content>
+                        <AnchorPane>
+                           <children>
+                              <GridPane fx:id="schedule" alignment="TOP_CENTER" minHeight="0.0" minWidth="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+            <HBox fx:id="bottombox" minWidth="0.0" styleClass="background-white" GridPane.rowIndex="3">
+               <children>
+                  <VBox alignment="CENTER" minWidth="0.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <ComboBox fx:id="typepicker" prefWidth="350.0" styleClass="table-view">
+                           <VBox.margin>
+                              <Insets left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </ComboBox>
+                        <TextArea fx:id="textfield" minWidth="0.0" prefHeight="120.0" promptText="Note Body / File Description" styleClass="textfield-disabled" wrapText="true">
+                           <VBox.margin>
+                              <Insets left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </TextArea>
+                        <HBox alignment="CENTER_LEFT" minWidth="0.0">
+                           <children>
+                              <Button fx:id="filebutton" minWidth="0.0" mnemonicParsing="false" onAction="#addfile" text="ADD FILE">
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Label fx:id="filename" minWidth="0.0" styleClass="label-grey">
+                                 <HBox.margin>
+                                    <Insets left="15.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox>
+                     <children>
+                        <AnchorPane fx:id="addbutton" accessibleRole="BUTTON" onMouseClicked="#addNewNote" styleClass="card-orange" VBox.vgrow="ALWAYS">
+                           <children>
+                              <VBox alignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Label fx:id="dayname1" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" styleClass="label-header" text="+" textAlignment="CENTER" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="notewindowbutton" accessibleRole="BUTTON" onMouseClicked="#openNoteWindow" styleClass="card-mid-lowpadding" VBox.vgrow="ALWAYS">
+                           <children>
+                              <VBox alignment="CENTER" minWidth="50.0" prefWidth="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Label fx:id="dayname11" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" styleClass="label-bright" text="OPEN PAGE" textAlignment="CENTER" textOverrun="CLIP" wrapText="true" VBox.vgrow="ALWAYS" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

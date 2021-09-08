@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="superparent" minHeight="0.0" minWidth="0.0" prefHeight="1080.0" stylesheets="@login_Stylesheet.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="canopy.app.view.calendarController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="1.0" layoutY="1.0" minHeight="0.0" minWidth="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" minHeight="0.0" minWidth="0.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <GridPane alignment="CENTER" minHeight="0.0" minWidth="0.0" HBox.hgrow="ALWAYS">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" />
+                        <ColumnConstraints hgrow="ALWAYS" />
+                        <ColumnConstraints hgrow="SOMETIMES" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <VBox GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+                           <children>
+                              <AnchorPane onMouseClicked="#clickback2" onMouseEntered="#hoverb2" onMouseExited="#hoverlb2" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <VBox alignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <ImageView fx:id="back2" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@images/Arrowb.png" />
+                                             </image>
+                                             <VBox.margin>
+                                                <Insets left="10.0" right="10.0" />
+                                             </VBox.margin>
+                                          </ImageView>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane onMouseClicked="#clickback" onMouseEntered="#hoverb" onMouseExited="#hoverlb" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <VBox alignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <ImageView fx:id="back" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@images/Arrow.png" />
+                                             </image>
+                                             <VBox.margin>
+                                                <Insets left="10.0" right="10.0" />
+                                             </VBox.margin>
+                                          </ImageView>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </VBox>
+                        <VBox GridPane.columnIndex="2" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+                           <children>
+                              <AnchorPane onMouseClicked="#clickforward2" onMouseEntered="#hoverf2" onMouseExited="#hoverlf2" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <VBox alignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <ImageView fx:id="forward2" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@images/Arrow2b.png" />
+                                             </image>
+                                             <VBox.margin>
+                                                <Insets left="10.0" right="10.0" />
+                                             </VBox.margin>
+                                          </ImageView>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </AnchorPane>
+                              <AnchorPane onMouseClicked="#clickforward" onMouseEntered="#hoverf" onMouseExited="#hoverlf" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <VBox alignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <ImageView fx:id="forward" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@images/Arrow2.png" />
+                                             </image>
+                                             <VBox.margin>
+                                                <Insets left="10.0" right="10.0" />
+                                             </VBox.margin>
+                                          </ImageView>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </AnchorPane>
+                           </children>
+                        </VBox>
+                        <GridPane fx:id="calendarPane" alignment="CENTER" hgap="8.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="ALWAYS" minWidth="0.0" />
+                            <ColumnConstraints hgrow="ALWAYS" minWidth="0.0" />
+                              <ColumnConstraints hgrow="ALWAYS" minWidth="0.0" />
+                              <ColumnConstraints hgrow="ALWAYS" minWidth="0.0" />
+                              <ColumnConstraints hgrow="ALWAYS" minWidth="0.0" />
+                              <ColumnConstraints hgrow="ALWAYS" minWidth="0.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints vgrow="ALWAYS" />
+                          </rowConstraints>
+                        </GridPane>
+                     </children>
+                  </GridPane>
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </HBox>
+            <AnchorPane minWidth="0.0" onMouseEntered="#lowerall" onMouseExited="#raiseall" styleClass="table-view">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <children>
+                  <GridPane alignment="CENTER_LEFT" hgap="10.0" minWidth="0.0" vgap="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <columnConstraints>
+                        <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="180.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="100.0" prefWidth="200.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="30.0" prefWidth="50.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="180.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="100.0" prefWidth="200.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="50.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="230.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="230.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="45.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="45.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <DatePicker fx:id="datepicker" prefWidth="200.0" styleClass="table-view" GridPane.columnIndex="8" GridPane.halignment="LEFT" />
+                        <Label alignment="TOP_CENTER" contentDisplay="CENTER" styleClass="label-grey" text="S T A R T   D A T E" wrapText="true" GridPane.columnIndex="7" GridPane.halignment="RIGHT" GridPane.valignment="CENTER" />
+                        <Label fx:id="typeheader" alignment="TOP_CENTER" contentDisplay="CENTER" styleClass="label-grey" text="T Y P E" wrapText="true" GridPane.halignment="RIGHT" />
+                        <Label alignment="TOP_CENTER" contentDisplay="CENTER" styleClass="label-grey" text="P A T I E N T " wrapText="true" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+                        <ComboBox fx:id="patientpicker" prefWidth="200.0" styleClass="table-view" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" />
+                        <ComboBox fx:id="typepicker" prefWidth="200.0" styleClass="table-view" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" />
+                        <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" styleClass="label-grey" text="S T A F F" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+                        <ComboBox fx:id="staffpicker" prefWidth="200.0" styleClass="table-view" GridPane.columnIndex="5" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" />
+                        <Label alignment="TOP_CENTER" contentDisplay="CENTER" styleClass="label-grey" text="R O O M" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="RIGHT" />
+                        <ComboBox fx:id="roompicker" prefWidth="200.0" styleClass="table-view" GridPane.columnIndex="5" GridPane.hgrow="ALWAYS" />
+                        <Button mnemonicParsing="false" onMouseClicked="#cleartype" prefWidth="30.0" styleClass="buttons" text="X" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+                        <Button mnemonicParsing="false" onMouseClicked="#clearpatient" prefWidth="30.0" styleClass="buttons" text="X" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                        <Button mnemonicParsing="false" onMouseClicked="#clearroom" prefWidth="30.0" styleClass="buttons" text="X" GridPane.columnIndex="6" GridPane.halignment="CENTER" />
+                        <Button fx:id="clearstaffbutton" mnemonicParsing="false" onMouseClicked="#clearstaff" prefWidth="30.0" styleClass="buttons" text="X" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                        <Label fx:id="paidheader" alignment="CENTER_RIGHT" contentDisplay="CENTER" styleClass="label-grey" text="N O T   P A I D" wrapText="true" GridPane.columnIndex="7" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+                        <CheckBox fx:id="paidcheck" mnemonicParsing="false" styleClass="label-grey" GridPane.columnIndex="8" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,77 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 17-Aug-2017, 17:12:05
+    Author     : Andy
+*/
+.root {
+	-fx-background-color: #b7d373;
+	
+    /*
+    -fx-background-image: url("background.png");
+    */    
+}
+
+.dialog-pane {
+    -fx-background-color: white;
+        -fx-text-fill: #e4e4e4;
+    
+}
+
+.dialog-pane > .content.label {
+   -fx-padding: 0.5em 0.5em 0.5em 0.5em;
+   -fx-text-fill:grey;
+}
+
+.dialog-pane .label {
+    -fx-text-fill: #e4e4e4;
+}
+
+.dialog-pane:header .header-panel {
+    -fx-background-color: #b7d373;
+}
+
+.dialog-pane:header .header-panel .label {
+    -fx-text-fill: white;
+}
+
+.button {
+    -fx-padding: 5 22 5 22;
+    -fx-background-radius: 0;
+    -fx-background-color: #b7d373;        
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 11pt;
+    -fx-text-fill: white;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+}
+
+.button:hover {
+    -fx-background-color: #8dc63f;
+    -fx-effect: dropshadow(three-pass-box, derive(#b7d373, -20%), 5, 0, 0, 0);
+}
+
+.button:pressed, .button:default:hover:pressed {
+  -fx-background-color: white;
+  -fx-text-fill: #6eb62e;
+}
+
+.button:focused {
+}
+
+.button:disabled, .button:default:disabled {
+    -fx-opacity: 0.4;
+    -fx-background-color: #e1e1e1;
+    -fx-text-fill: white;
+}
+
+.button:default {
+    -fx-background-color: -fx-focus-color;
+    -fx-text-fill: #ffffff;
+}
+
+.button:default:hover {
+    -fx-background-color: derive(-fx-focus-color,30%);
+}

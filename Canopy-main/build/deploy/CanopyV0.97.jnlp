@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="CanopyV0.97.jnlp">
+  <information>
+    <title>CanopyV0.97</title>
+    <vendor>com.gratech</vendor>
+    <description>Canopy</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="CanopyV0.97.jar" size="845552" download="eager" />
+    <jar href="libs\biweekly-0.6.3.jar" size="610711" download="eager" />
+    <jar href="libs\commons-collections4-4.2.jar" size="752798" download="eager" />
+    <jar href="libs\commons-lang3-3.7.jar" size="499634" download="eager" />
+    <jar href="libs\emailaddress-rfc2822-1.0.1.jar" size="13797" download="eager" />
+    <jar href="libs\jackson-core-2.9.8.jar" size="325619" download="eager" />
+    <jar href="libs\jasypt-1.9.2.jar" size="129265" download="eager" />
+    <jar href="libs\javax.mail.jar" size="659033" download="eager" />
+    <jar href="libs\simple-java-mail-5.1.1 (1).jar" size="181101" download="eager" />
+    <jar href="libs\slf4j-api-1.7.25.jar" size="41203" download="eager" />
+    <jar href="libs\slf4j-simple-1.7.25.jar" size="15257" download="eager" />
+    <jar href="libs\vinnie-2.0.2.jar" size="51317" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="0" height="0" main-class="canopy.app.MainApp"  name="Canopy" />
+  <update check="background"/>
+</jnlp>

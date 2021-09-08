@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.Double?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Polygon?>
+
+<AnchorPane maxHeight="2160.0" maxWidth="3840.0" prefHeight="1080.0" prefWidth="1920.0" styleClass="background-three" stylesheets="@login_Stylesheet.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="canopy.app.view.borderPaneController">
+   <children>
+      <BorderPane fx:id="borderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="5.0" minWidth="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <AnchorPane fx:id="tabpane" minHeight="0.0">
+               <children>
+                  <VBox alignment="BOTTOM_LEFT" layoutY="50.0" minHeight="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <VBox fx:id="plannerbox" alignment="CENTER" minHeight="0.0" onMouseClicked="#planclicked" onMouseEntered="#planhovered" prefHeight="140.0" styleClass="card-dark">
+                           <children>
+                              <ImageView fx:id="planner" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@planner.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="plannerlab" alignment="CENTER" styleClass="label-bright" text="P L  A N N E R" />
+                           </children>
+                        </VBox>
+                        <VBox fx:id="patientbox" alignment="CENTER" minHeight="0.0" onMouseClicked="#patientsclicked" onMouseEntered="#patientshovered" prefHeight="140.0" styleClass="card-dark">
+                           <children>
+                              <ImageView fx:id="patients" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@patients.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="patientslab" alignment="CENTER" styleClass="label-bright" text="P E O P L E" />
+                           </children>
+                        </VBox>
+                        <VBox fx:id="mailbox" alignment="CENTER" minHeight="0.0" onMouseClicked="#mailclicked" onMouseEntered="#mailhovered" prefHeight="140.0" styleClass="card-dark">
+                           <children>
+                              <ImageView fx:id="mail" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@mail.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="maillab" alignment="CENTER" styleClass="label-bright" text="M A I L" />
+                           </children>
+                        </VBox>
+                        <VBox fx:id="roomsbox" alignment="CENTER" minHeight="0.0" onMouseClicked="#roomsclicked" onMouseEntered="#roomhovered" prefHeight="140.0" styleClass="card-dark">
+                           <children>
+                              <ImageView fx:id="rooms" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@rooms.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="roomslab" alignment="CENTER" styleClass="label-bright" text="R O O M S" />
+                           </children>
+                        </VBox>
+                        <VBox fx:id="typesbox" alignment="CENTER" minHeight="0.0" onMouseClicked="#typesclicked" onMouseEntered="#typehovered" prefHeight="140.0" styleClass="card-dark">
+                           <children>
+                              <ImageView fx:id="types" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@types.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="typeslab" alignment="CENTER" styleClass="label-bright" text="A P P. T Y P E S" />
+                           </children>
+                        </VBox>
+                        <AnchorPane minHeight="0.0" prefWidth="200.0" styleClass="card-dark" VBox.vgrow="ALWAYS" />
+                        <VBox fx:id="logoutbox" alignment="BOTTOM_CENTER" minHeight="0.0" onMouseClicked="#logoutclicked" onMouseEntered="#loghovered" prefHeight="140.0" styleClass="card-dark">
+                           <children>
+                              <ImageView fx:id="logout" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@logout.png" />
+                                 </image>
+                              </ImageView>
+                              <Label alignment="CENTER" styleClass="label-bright" text="L O G   O U T" />
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </VBox>
+                        <AnchorPane layoutX="10.0" layoutY="767.0" minHeight="35.0" prefHeight="50.0" prefWidth="200.0" styleClass="card-dark" />
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </left>
+         <right>
+            <VBox alignment="TOP_CENTER" maxWidth="700.0" minHeight="0.0" prefWidth="400.0" styleClass="background-white" BorderPane.alignment="TOP_CENTER">
+               <children>
+                  <AnchorPane fx:id="rightpane" prefWidth="500.0" />
+               </children>
+            </VBox>
+         </right>
+         <center>
+            <AnchorPane minHeight="0.0" minWidth="0.0" BorderPane.alignment="TOP_CENTER">
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+               <children>
+                  <VBox alignment="CENTER" minHeight="0.0" minWidth="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ImageView fx:id="backgroundimage" pickOnBounds="true" preserveRatio="true" VBox.vgrow="NEVER">
+                           <image>
+                              <Image url="@logogrey.png" />
+                           </image>
+                           <viewport>
+                              <Rectangle2D />
+                           </viewport>
+                        </ImageView>
+                     </children>
+                  </VBox>
+                  <HBox fx:id="centercontainer" alignment="CENTER" minWidth="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane fx:id="centerpane" minHeight="0.0" minWidth="0.0" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin></AnchorPane>
+                        <AnchorPane fx:id="centersecondpane" minHeight="0.0" minWidth="0.0" HBox.hgrow="ALWAYS" />
+                        <AnchorPane fx:id="centerthirdpane" minHeight="0.0" minWidth="0.0" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin></AnchorPane>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+      <AnchorPane fx:id="coverpane" minHeight="5.0" minWidth="5.0" styleClass="background-mid" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" disable="true" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Polygon fill="#b7d373" rotate="80.4" scaleX="13.0" scaleY="12.5" stroke="#8dc63f" strokeType="OUTSIDE" strokeWidth="5.0">
+                     <points>
+                        <Double fx:value="-50.0" />
+                        <Double fx:value="40.0" />
+                        <Double fx:value="50.0" />
+                        <Double fx:value="40.0" />
+                        <Double fx:value="0.0" />
+                        <Double fx:value="-60.0" />
+                     </points>
+                  </Polygon>
+                  <Polygon fill="#8dc63f" rotate="142.7" scaleX="11.0" scaleY="11.0" stroke="#6eb62e" strokeType="OUTSIDE" strokeWidth="5.0">
+                     <points>
+                        <Double fx:value="-50.0" />
+                        <Double fx:value="40.0" />
+                        <Double fx:value="50.0" />
+                        <Double fx:value="40.0" />
+                        <Double fx:value="0.0" />
+                        <Double fx:value="-60.0" />
+                     </points>
+                  </Polygon>
+                  <Polygon fill="#6eb62e" rotate="-165.4" scaleX="9.0" scaleY="9.0" stroke="#b7d373" strokeType="OUTSIDE" strokeWidth="5.0">
+                     <points>
+                        <Double fx:value="-50.0" />
+                        <Double fx:value="40.0" />
+                        <Double fx:value="50.0" />
+                        <Double fx:value="40.0" />
+                        <Double fx:value="0.0" />
+                        <Double fx:value="-60.0" />
+                     </points>
+                  </Polygon>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="30.0" layoutY="30.0" minHeight="10.0" minWidth="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fx:id="coverpiece" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@coverobjectmasked.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox alignment="BOTTOM_LEFT" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Pane maxHeight="200.0">
+                     <HBox.margin>
+                        <Insets bottom="30.0" left="100.0" />
+                     </HBox.margin>
+                     <children>
+                        <VBox alignment="BOTTOM_LEFT">
+                           <children>
+                              <Label fx:id="covertime" styleClass="label-title" text="13:31" />
+                              <Label fx:id="coverdate" styleClass="label-header" text="Thursday 22nd February" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </Pane>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
